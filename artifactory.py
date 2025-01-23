@@ -33,6 +33,7 @@ import json
 import os
 import pathlib
 import platform
+import posixpath
 import re
 import urllib.parse
 from itertools import chain
@@ -444,7 +445,7 @@ class _ArtifactoryFlavour(object if IS_PYTHON_3_12_OR_NEWER else pathlib._Flavou
     sep = "/"
     altsep = "/"
     has_drv = True
-    pathmod = pathlib.posixpath
+    pathmod = posixpath
     is_supported = True
 
     def _get_base_url(self, url):
